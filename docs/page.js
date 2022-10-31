@@ -4,6 +4,12 @@ let ser = document.querySelector(".serachbody");
 let form = document.querySelector("form");
 const body = document.querySelector("body");
 
+function randomPage() {
+  let count = Math.floor(Math.random() * 10) + 1;
+  body.style.backgroundImage = `url(page/page${count}.png)`;
+}
+randomPage();
+
 let date = new Date();
 let hours = date.getHours();
 if (hours >= 23 || hours <= 6) {

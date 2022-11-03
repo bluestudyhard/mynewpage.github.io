@@ -9,7 +9,6 @@ function randomPage() {
   body.style.backgroundImage = `url(page/page${count}.png)`;
 }
 randomPage();
-
 let date = new Date();
 let hours = date.getHours();
 if (hours >= 23 || hours <= 6) {
@@ -53,3 +52,16 @@ changeImage();
 // form.action = "https://cn.bing.com/search?q=" + ser.value;
 // console.log(form.action);
 //form.action = `https://www.baidu.com/s?wd=ss${ser.value}`;
+
+let btnts = document.querySelector(".translate");
+let translate = document.querySelector(".translatebox");
+let isdisplay = false;
+btnts.onclick = () => {
+  if (!isdisplay) {
+    translate.style.display = "none";
+    isdisplay = true;
+  } else {
+    isdisplay = false;
+    translate.style.display = "flex";
+  }
+};
